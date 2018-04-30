@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Armando la web</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <style type="text/css" media="screen">
+    /** intro ***/
+
+    @import url('https://fonts.googleapis.com/css?family=Chau+Philomene+One');
+
+    .intro {
+        height: 100vh;
+        font-family: 'Chau Philomene One', sans-serif;
+        transition: all ease .2s
+    }
+
+    .intro .valign {
+        width: 100% !important;
+    }
+
+    .profile {
+        width: 200px;
+        height: 200px;
+        border-radius: 200px;
+        overflow: hidden;
+        background-color: #000;
+        background-image: url('img/profile/mapa.png');
+        background-size: 1150px;
+        display: inline-block;
+        right: -120px;
+        top: -70px;
+        position: absolute;
+        -webkit-box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 1);
+        box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 1);
+        animation: noBack 1s forwards, introProfile 2s ease-in-out forwards 1s
+    }
+
+    @keyframes noBack {
+        0% {
+            background-size: 10000px;
+            right: -300px;
+            background-position: -80000000px -8000000px
+        }
+        50% {
+            background-size: 10000px;
+            right: -120px;
+            background-position: -80000000px -8000000px
+        }
+        60% {
+            background-size: 10000px;
+            right: -120px;
+            background-position: -80000000px -8000000px
+        }
+        65% {
+            background-size: 10000px;
+            background-position: -1000px -3300px
+        }
+        70% {
+            background-size: 1150px;
+            background-position: 0px -290px;
+        }
+        100% {
+            background-size: 1150px;
+            background-position: 0px -290px;
+        }
+    }
+
+    @keyframes introProfile {
+        0% {
+            background-position: 0px -290px;
+            background-size: 1150px;
+        }
+        10% {
+            background-position: 0px -290px;
+            background-size: 1150px;
+        }
+        15% {
+            background-position: 0px 0px;
+            background-size: 1150px;
+        }
+        25% {
+            background-position: 0px 0px;
+            background-size: 1150px;
+        }
+        30% {
+            background-position: -300px 0px;
+            background-size: 1150px;
+        }
+        40% {
+            background-position: -300px 0px;
+            background-size: 1150px;
+        }
+        45% {
+            background-position: -300px -290px;
+            background-size: 1150px;
+        }
+        55% {
+            background-position: -300px -290px;
+            background-size: 1150px;
+        }
+        60% {
+            background-position: -580px -290px;
+            background-size: 1150px;
+        }
+        70% {
+            background-position: -580px -290px;
+            background-size: 1150px;
+        }
+        75% {
+            background-position: -580px 0px;
+            background-size: 1150px;
+        }
+        85% {
+            background-position: -580px 0px;
+            background-size: 1150px;
+        }
+        90% {
+            background-position: -805px 0px;
+            background-size: 1072px;
+        }
+        100% {
+            background-position: -805px 0px;
+            background-size: 1072px
+        }
+    }
+
+    .profile:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-radius: 250px;
+        animation: shadowProfile .3s ease forwards;
+        animation-delay: 4.1s;
+    }
+
+    @keyframes shadowProfile {
+        from {
+            -webkit-box-shadow: inset 0px 0px 0px 0px rgba(83, 52, 109, 0);
+            -moz-box-shadow: inset 0px 0px 0px 0px rgba(0, 94, 255, 0);
+            box-shadow: inset 0px 0px 0px 0px rgba(0, 94, 255, 0);
+        }
+        to {
+            -webkit-box-shadow: inset 10px 15px 85px 6px rgba(83, 52, 109, 0.3);
+            -moz-box-shadow: inset 10px 15px 85px 6px rgba(83, 52, 109, 0.3);
+            box-shadow: inset 10px 15px 85px 6px rgba(83, 52, 109, 0.3);
+        }
+    }
+
+    .intro-txt {
+        font-size: 3em;
+        overflow: hidden;
+        height: 1.5em;
+        opacity: 0;
+    }
+
+    .contentbody {
+        overflow: hidden;
+        margin-bottom: 0px !important
+    }
+
+    .contentbody .valign-wrapper:first-child .intro-txt {
+        animation: fadeInLeftintro .2s forwards 1s;
+    }
+
+    @keyframes fadeInLeftintro {
+        from {
+            opacity: 0;
+            transform: translateX(-10em);
+            visibility: hidden
+        }
+        to {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(1em)
+        }
+    }
+
+    .contentbody .valign-wrapper:last-child .intro-txt {
+        animation: fadeInRightintro .2s forwards 1s;
+    }
+
+    @keyframes fadeInRightintro {
+        from {
+            opacity: 0;
+            transform: translateX(10em);
+            visibility: hidden
+        }
+        to {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(1em)
+        }
+    }
+
+    .intro-txt span {
+        display: block;
+        animation: txtcarru 2s ease forwards 1.1s;
+    }
+
+    @keyframes txtcarru {
+        0% {
+            margin-top: 0;
+        }
+        30% {
+            margin-top: 0;
+        }
+        35% {
+            margin-top: -1.8em;
+            margin-bottom: 1.8em;
+        }
+        40% {
+            margin-top: -1.6em;
+            margin-bottom: 1.6em;
+        }
+        45% {
+            margin-top: -1.65em;
+            margin-bottom: 1.65em;
+        }
+        50% {
+            margin-top: -1.65em;
+            margin-bottom: 1.65em;
+        }
+        55% {
+            margin-top: -1.65em;
+            margin-bottom: 1.65em;
+        }
+        60% {
+            margin-top: -1.6em;
+            margin-bottom: 1.6em;
+        }
+        65% {
+            margin-top: -2.9em;
+            margin-bottom: 2.9em;
+        }
+        70% {
+            margin-top: -2.8em;
+            margin-bottom: 2.8em;
+        }
+        75% {
+            margin-top: -2.8em;
+            margin-bottom: 2.8em;
+        }
+        85% {
+            margin-top: -2.7em;
+            margin-bottom: 2.7em;
+        }
+        90% {
+            margin-top: -.2em;
+            margin-bottom: .2em;
+        }
+        100% {
+            margin-top: .2em;
+        }
+    }
+    /*** cierra intro **/
+    /*** transformacion intro ***/
+
+    .header-intro {
+        height: 100vh;
+        width: 25% !important;
+        background: #000000;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #53346D, #000000);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #53346D, #000000);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    .header-intro .profile {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        top: 0 !important;
+        bottom: 0 !important;
+        margin: auto;
+        left: 0;
+        right: inherit;
+        background-size: 798px;
+        animation: none;
+        -webkit-box-shadow: 0px 0px 0px 7px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 0px 0px 0px 7px rgba(0, 0, 0, 1);
+        box-shadow: 0px 0px 0px 7px rgba(0, 0, 0, 1);
+        background-position-x: 1795px;
+    }
+
+    .header-intro .intro-txt span {
+        animation: none !important;
+    }
+
+    .header-intro .intro-txt {
+        font-size: 2em !important;
+        animation: none !important;
+        opacity: 1 !important;
+        margin: 20px 0;
+    }
+
+    .contentbody .header-intro:last-child {
+        display: none
+    }
+    /** cierra transformacion intro **/
+    /** MARCO DE LA PAGINA ***/
+
+    .contentfull{
+    	width: 100%;
+    	height: 100vh;
+    	background: #41295a;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to top, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to top, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		margin-bottom: 0px !important
+    }
+
+    .contentfull .valign{
+    	width: 100%
+    }
+
+    @media (max-width: 6000px) and (min-width: 2048px) {
+        .contentbody {
+        	min-width: 1396px;
+            max-width:calc(100% - 25%);
+            height: calc(100vh - 15vh)!important;    
+            -webkit-box-shadow: 0px 0px 0px 5px rgba(255,255,255,.2);
+			-moz-box-shadow: 0px 0px 0px 5px rgba(255,255,255,.2);
+			box-shadow: 0px 0px 0px 5px rgba(255,255,255,.2);
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			border-radius: 4px; 
+        }
+
+        .intro {
+		    height: calc(100vh - 15vh)!important
+		}
+
+        .header-intro {
+			height: calc(100vh - 15vh)!important
+		}
+    }
+    /** CIERRA MARCO **/
+    /** ESTILOS MENU ***/
+
+    .contentnavlist ul {
+        border: none !important
+    }
+
+    .contentnavlist li {
+        border-color: rgba(255, 255, 255, .2) !important;
+        font-size: 1.4em !important;
+        background-color: rgba(0, 0, 0, 1) !important;
+        animation-duration: .4s;
+        position: relative;
+        padding: 0 0 !important
+    }
+
+    .contentnavlist li a {
+        position: relative;
+        z-index: 100 !important;
+        width: 100% !important;
+        display: block;
+        padding: 10px 20px !important
+    }
+
+    .contentnavlist li a:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: -1;
+        animation: fadeOutRight .6s cubic-bezier(0, 0, .58, 1) forwards
+    }
+
+    .contentnavlist li a:hover:after {
+        animation: fadeInLeft .3s cubic-bezier(.42, 0, 1, 1) forwards !important
+    }
+    /** CIERRA ESTILOS MENU ***/
+    </style>
+</head>
+
+<body>
+    <div class="row contentfull valign-wrapper">
+        <div class="valign">
+            <div class="row black contentbody">
+                <div class="col s12 m6 grey darken-4 intro valign-wrapper">
+                    <div class="valign center-align">
+                        <div class="col s12" style="position: relative;">
+                            <div class="profile">
+                            </div>
+                            <div class="intro-txt white-text">
+                                <span>DISEÑO WEB</span>
+                                <span>ADOBE XD</span>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="row contentnavlist hide" style="float: none">
+                                <div class="col s12 m12 l10 offset-l1">
+                                    <ul class="collection with-header">
+                                        <li class="collection-item fadeInLeft"><a class="grey-text text-darken-4 animated">Inicio</a></li>
+                                        <li class="collection-item fadeInRight"><a class="grey-text text-darken-4 animated">Proyectos</a></li>
+                                        <li class="collection-item fadeInLeft"><a class="grey-text text-darken-4 animated">Planes Web</a></li>
+                                        <li class="collection-item fadeInRight"><a class="grey-text text-darken-4 animated">Contactarme</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 valign-wrapper intro">
+                    <div class="valign center-align">
+                        <div class="intro-txt white-text">
+                            <span>MATERIALS CSS</span>
+                            <span>CSS3</span>
+                            <span>JAVASCRIPT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(function() {
+        setTimeout(function() {
+            $('.intro').addClass('header-intro');
+            $('.contentbody .intro:first-child').find('.intro-txt span:first-child').text('ARMANDOLAWEB');
+            $('.contentnavlist').removeClass('hide').find('li').addClass('animated')
+        }, 4500);
+    })
+    </script>
+</body>
+
+</html>

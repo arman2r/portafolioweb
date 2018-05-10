@@ -394,13 +394,15 @@
         width: calc(100% - 25%) !important;
         padding: 0 0 !important;
         height: 100vh;
-        overflow-x: auto;
-        overflow-y: hidden
+        overflow-y: auto;
     }
 
     .grid {
         padding-top: 5px;
         margin-bottom: 20px !important;
+        height: 600px;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
     }
 
     .grid-sizer,
@@ -499,7 +501,7 @@
                     </div>
                 </div>
                 <div class="col s12 m6 grid-layout hide valign-wrapper">
-                    <div class="col s12 m12 l10 offset-l1" style="overflow-y: hidden;overflow-x: auto">
+                    <div class="col s12 m12 l10 offset-l1">
                         <div class="grid">
                             <div class="grid-sizer"></div>
                             <div class="grid-item">

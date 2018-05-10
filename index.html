@@ -4,6 +4,7 @@
 <head>
     <title>Armando la web</title>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <style type="text/css" media="screen">
@@ -266,11 +267,8 @@
         height: 100vh;
         width: 25% !important;
         background: #000000;
-        /* fallback for old browsers */
-        background: -webkit-linear-gradient(to bottom, #53346D, #000000);
-        /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to bottom, #53346D, #000000);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: -webkit-linear-gradient(to bottom, #53346D, #750000);
+        background: linear-gradient(to bottom, #53346D, #750000);
     }
 
     .header-intro .profile {
@@ -307,39 +305,42 @@
     /** cierra transformacion intro **/
     /** MARCO DE LA PAGINA ***/
 
-    .contentfull{
-    	width: 100%;
-    	height: 100vh;
-    	background: #41295a;  /* fallback for old browsers */
-		background: -webkit-linear-gradient(to top, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
-		background: linear-gradient(to top, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-		margin-bottom: 0px !important
+    .contentfull {
+        width: 100%;
+        height: 100vh;
+        background: #ad5389;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, #ad5389, #3c1053);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, #ad5389, #3c1053);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        margin-bottom: 0px !important
     }
 
-    .contentfull .valign{
-    	width: 100%
+    .contentfull .valign {
+        width: 100%
     }
 
     @media (max-width: 6000px) and (min-width: 2048px) {
         .contentbody {
-        	min-width: 1396px;
-            max-width:calc(100% - 25%);
-            height: calc(100vh - 15vh)!important;    
-            -webkit-box-shadow: 0px 0px 0px 5px rgba(255,255,255,.2);
-			-moz-box-shadow: 0px 0px 0px 5px rgba(255,255,255,.2);
-			box-shadow: 0px 0px 0px 5px rgba(255,255,255,.2);
-			-webkit-border-radius: 4px;
-			-moz-border-radius: 4px;
-			border-radius: 4px; 
+            min-width: 1396px;
+            max-width: calc(100% - 25%);
+            height: calc(100vh - 15vh)!important;
+            -webkit-box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, .2);
+            -moz-box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, .2);
+            box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, .2);
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
         }
 
         .intro {
-		    height: calc(100vh - 15vh)!important
-		}
+            height: calc(100vh - 15vh)!important
+        }
 
         .header-intro {
-			height: calc(100vh - 15vh)!important
-		}
+            height: calc(100vh - 15vh)!important
+        }
     }
     /** CIERRA MARCO **/
     /** ESTILOS MENU ***/
@@ -358,11 +359,17 @@
     }
 
     .contentnavlist li a {
+        font-weight: lighter !important;
         position: relative;
         z-index: 100 !important;
         width: 100% !important;
         display: block;
-        padding: 10px 20px !important
+        padding: 10px 20px !important;
+        transition: all ease-in-out .2s
+    }
+
+    .contentnavlist li a:hover {
+        color: #000 !important;
     }
 
     .contentnavlist li a:after {
@@ -381,6 +388,86 @@
         animation: fadeInLeft .3s cubic-bezier(.42, 0, 1, 1) forwards !important
     }
     /** CIERRA ESTILOS MENU ***/
+    /*** GRID CONTENIDO ***/
+
+    .grid-layout {
+        width: calc(100% - 25%) !important;
+        padding: 0 0 !important;
+        height: 100vh;
+        overflow-x: auto;
+        overflow-y: hidden
+    }
+
+    .grid {
+        padding-top: 5px;
+        margin-bottom: 20px !important;
+    }
+
+    .grid-sizer,
+    .grid-item {
+        width: 25% !important;
+        padding: 1px 1px !important;
+        box-sizing: border-box !important;
+        min-height: 250px !important;
+        /*background-color: red*/
+    }
+
+    .grid-item .card-panel {
+        height: 100%;
+        min-height: 250px;
+        padding: 2px 2px !important;
+        margin: 2px 0 !important;
+    }
+
+    .grid-item .col{
+    	padding: 0 .20rem !important
+    }
+
+    .grid-item .card-panel .valign {
+        width: 100%
+    }
+
+    .grid-item .card-panel .profile-static {
+        width: 60px;
+        height: 60px;
+        -webkit-border-radius: 80px;
+        -moz-border-radius: 80px;
+        border-radius: 80px;
+        display: inline-block
+    }
+
+    .grid-item .card-panel .profile-static i {
+        font-size: 3.9em
+    }
+    /*.grid-sizer:hover,
+    .grid-item:hover {
+        background-color: purple !important
+    }*/
+
+    .grid-item--gigante {
+        width: 50% !important
+    }
+
+    @media (max-width: 768px) {
+
+        .grid-sizer,
+        .grid-item {
+            width: 33.3% !important;
+            padding: 2px !important;
+            box-sizing: border-box !important;
+        }
+    }
+
+    @media (max-width: 600px) {
+
+        .grid-sizer,
+        .grid-item {
+            width: 50% !important;
+            padding: 2px !important;
+            box-sizing: border-box !important;
+        }
+    }
+    /** CIERRA GRID ***/
     </style>
 </head>
 
@@ -391,7 +478,7 @@
                 <div class="col s12 m6 grey darken-4 intro valign-wrapper">
                     <div class="valign center-align">
                         <div class="col s12" style="position: relative;">
-                            <div class="profile">
+                            <div class="profile center-align">
                             </div>
                             <div class="intro-txt white-text">
                                 <span>DISEÑO WEB</span>
@@ -401,11 +488,90 @@
                             <div class="row contentnavlist hide" style="float: none">
                                 <div class="col s12 m12 l10 offset-l1">
                                     <ul class="collection with-header">
-                                        <li class="collection-item fadeInLeft"><a class="grey-text text-darken-4 animated">Inicio</a></li>
-                                        <li class="collection-item fadeInRight"><a class="grey-text text-darken-4 animated">Proyectos</a></li>
-                                        <li class="collection-item fadeInLeft"><a class="grey-text text-darken-4 animated">Planes Web</a></li>
-                                        <li class="collection-item fadeInRight"><a class="grey-text text-darken-4 animated">Contactarme</a></li>
+                                        <li class="collection-item fadeInLeft"><a class="grey-text text-darken-1 animated">Inicio</a></li>
+                                        <li class="collection-item fadeInRight"><a class="grey-text text-darken-1 animated">Proyectos</a></li>
+                                        <li class="collection-item fadeInLeft"><a class="grey-text text-darken-1 animated">Planes Web</a></li>
+                                        <li class="collection-item fadeInRight"><a class="grey-text text-darken-1 animated">Contactarme</a></li>
                                     </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 grid-layout hide valign-wrapper">
+                    <div class="col s12 m12 l10 offset-l1" style="overflow-y: hidden;overflow-x: auto">
+                        <div class="grid">
+                            <div class="grid-sizer"></div>
+                            <div class="grid-item">
+                                <div class="col s12">
+                                    <div class="card-panel valign-wrapper">
+                                        <div class="valign center-align">
+                                            <div class="profile-static z-depth-2">
+                                                <i class="material-icons">face</i>
+                                            </div>
+                                            <h6> <pre> <hv> Hoja de Vida </hv> </pre> </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item grid-item--gigante">
+                                <div class="col s12">
+                                    <div class="card-panel valign-wrapper">
+                                        <div class="valign center-align">
+                                            <div class="profile-static z-depth-2">
+                                                <i class="material-icons">face</i>
+                                            </div>
+                                            <h6> <pre> <hv> Hoja de Vida </hv> </pre> </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item grid-item--gigante">
+                                <div class="col s12">
+                                    <div class="card-panel valign-wrapper">
+                                        <div class="valign center-align">
+                                            <div class="profile-static z-depth-2">
+                                                <i class="material-icons">face</i>
+                                            </div>
+                                            <h6> <pre> <hv> Hoja de Vida </hv> </pre> </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <div class="col s12">
+                                    <div class="card-panel valign-wrapper">
+                                        <div class="valign center-align">
+                                            <div class="profile-static z-depth-2">
+                                                <i class="material-icons">face</i>
+                                            </div>
+                                            <h6> <pre> <hv> Hoja de Vida </hv> </pre> </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <div class="col s12">
+                                    <div class="card-panel valign-wrapper">
+                                        <div class="valign center-align">
+                                            <div class="profile-static z-depth-2">
+                                                <i class="material-icons">face</i>
+                                            </div>
+                                            <h6> <pre> <hv> Hoja de Vida </hv> </pre> </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item grid-item--gigante">
+                                <div class="col s12">
+                                    <div class="card-panel valign-wrapper">
+                                        <div class="valign center-align">
+                                            <div class="profile-static z-depth-2">
+                                                <i class="material-icons">face</i>
+                                            </div>
+                                            <h6> <pre> <hv> Hoja de Vida </hv> </pre> </h6>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -425,12 +591,39 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
     <script>
     $(document).ready(function() {
+
         setTimeout(function() {
             $('.intro').addClass('header-intro');
             $('.contentbody .intro:first-child').find('.intro-txt span:first-child').text('ARMANDOLAWEB');
-            $('.contentnavlist').removeClass('hide').find('li').addClass('animated')
+            $('.contentnavlist').removeClass('hide').find('li').addClass('animated');
+            $('.grid-layout').removeClass('hide');
+
+
+            // external JS: masonry.pkgd.js
+
+            var $grid = $('.grid').masonry({
+                // set itemSelector so .grid-sizer is not used in layout
+                itemSelector: '.grid-item',
+                // use element for option
+                columnWidth: '.grid-sizer',
+                percentPosition: true,
+                stagger: 150,
+                resize: true
+
+            });
+
+
+
+            $grid.on('click', '.grid-item', function() {
+                // change size of item via class
+                $(this).toggleClass('grid-item--gigante');
+                // trigger layout
+                $grid.masonry();
+            });
+
         }, 4500);
     })
     </script>

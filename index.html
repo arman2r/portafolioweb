@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
     <style type="text/css" media="screen">
     /** intro ***/
 
@@ -397,6 +398,10 @@
         overflow-y: auto;
     }
 
+    .grid-layout .valign{
+    	width: 100%;
+    }
+
     .grid {
         padding-top: 5px;
         margin-bottom: 20px !important;
@@ -411,6 +416,18 @@
         /*background-color: red*/
     }
 
+    .grid-item:nth-child(3){    
+    	height: 508px !important
+    }
+
+    .grid-item:last-child{    
+    	width: 50% !important
+    }
+
+    .grid-item:nth-child(3) .card-panel{
+    	height: 508px
+    }
+
     .grid-item .card-panel {
         height: 100%;
         min-height: 250px;
@@ -418,8 +435,8 @@
         margin: 2px 0 !important;
     }
 
-    .grid-item .col{
-    	padding: 0 .20rem !important
+    .grid-item .col {
+        padding: 0 .20rem !important
     }
 
     .grid-item .card-panel .valign {
@@ -432,11 +449,32 @@
         -webkit-border-radius: 80px;
         -moz-border-radius: 80px;
         border-radius: 80px;
-        display: inline-block
+        display: inline-block        
     }
 
     .grid-item .card-panel .profile-static i {
-        font-size: 3.9em
+        font-size: 2.5em;
+        line-height: 60px
+    }
+
+    .grid-item:nth-child(3) .valign{
+    	height: 100%;
+    }
+
+    .grid-item:nth-child(3) .card-panel .profile-static {
+    	width: 40px;
+    	height: 40px;
+    	float: left;
+    	margin: 8px;
+    }
+
+    .grid-item:nth-child(3) .card-panel .profile-static i {
+        font-size: 1.8em;
+        line-height: 40px
+    }
+
+    .grid-item:nth-child(3) .card-panel h6 pre{
+    	text-align: left !important
     }
     /*.grid-sizer:hover,
     .grid-item:hover {
@@ -444,7 +482,13 @@
     }*/
 
     .grid-item--gigante {
-        width: 50% !important
+        margin-bottom: 8px !important
+    }
+
+    .grid-item--gigante,
+    .grid-item--gigante .card-panel {
+        width: 100% !important;
+        height: 620px !important
     }
 
     @media (max-width: 768px) {
@@ -498,41 +542,80 @@
                     </div>
                 </div>
                 <div class="col s12 m6 grid-layout hide valign-wrapper">
-                    <div class="col s12 m12 l10 offset-l1">
-                        <div class="grid">
-                            <div class="grid-sizer"></div>
-                            <div class="grid-item">
-                                <div class="col s12">
-                                    <div class="card-panel valign-wrapper">
-                                        <div class="valign center-align">
-                                            <div class="profile-static z-depth-2">
-                                                <i class="material-icons">face</i>
+                    <div class="valign">
+                        <div class="col s12 m12 l10 offset-l1">
+                            <div class="grid">
+                                <div class="grid-sizer"></div>
+                                <div class="grid-item animated zoomIn">
+                                    <div class="col s12">
+                                        <div class="card-panel valign-wrapper">
+                                            <div class="valign center-align">
+                                                <div class="profile-static z-depth-2">
+                                                    <i class="material-icons">face</i>
+                                                </div>
+                                                <h6> <pre> Armando Rubio </pre> </h6>
                                             </div>
-                                            <h6> <pre> <hv> Hoja de Vida </hv> </pre> </h6>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="grid-item grid-item--gigante">
-                                <div class="col s12">
-                                    <div class="card-panel valign-wrapper">
-                                        <div class="valign center-align">
-                                            <div class="profile-static z-depth-2">
-                                                <i class="material-icons">face</i>
+                                <div class="grid-item animated zoomIn">
+                                    <div class="col s12">
+                                        <div class="card-panel valign-wrapper">
+                                            <div class="valign center-align">
+                                                <div class="profile-static z-depth-2">
+                                                    <i class="material-icons">folder_special</i>
+                                                </div>
+                                                <h6> <pre> Proyectos </pre> </h6>
                                             </div>
-                                            <h6> <pre> <hv> Hoja de Vida </hv> </pre> </h6>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="grid-item grid-item--gigante">
-                                <div class="col s12">
-                                    <div class="card-panel valign-wrapper">
-                                        <div class="valign center-align">
-                                            <div class="profile-static z-depth-2">
-                                                <i class="material-icons">face</i>
+                                <div class="grid-item animated zoomIn">
+                                    <div class="col s12">
+                                        <div class="card-panel valign-wrapper">
+                                            <div class="valign center-align">
+                                                <div class="profile-static z-depth-2">
+                                                    <i class="material-icons">domain</i>
+                                                </div>
+                                                <h6> <pre> Experiencia </pre> </h6>
                                             </div>
-                                            <h6> <pre> <hv> Hoja de Vida </hv> </pre> </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="grid-item animated zoomIn">
+                                    <div class="col s12">
+                                        <div class="card-panel valign-wrapper">
+                                            <div class="valign center-align">
+                                                <div class="profile-static z-depth-2">
+                                                    <i class="material-icons">work_outline</i>
+                                                </div>
+                                                <h6> <pre> Contratarme </pre> </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-item animated zoomIn">
+                                    <div class="col s12">
+                                        <div class="card-panel valign-wrapper">
+                                            <div class="valign center-align">
+                                                <div class="profile-static z-depth-2">
+                                                    <i class="material-icons">important_devices</i>
+                                                </div>
+                                                <h6> <pre> Planes Web </pre> </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-item animated zoomIn">
+                                    <div class="col s12">
+                                        <div class="card-panel valign-wrapper">
+                                            <div class="valign center-align">
+                                                <div class="profile-static z-depth-2">
+                                                    <i class="material-icons">mail</i>
+                                                </div>
+                                                <h6> <pre> Contáctarme </pre> </h6>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -555,6 +638,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
     <script>
     $(document).ready(function() {
 

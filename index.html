@@ -266,7 +266,7 @@
 
     .header-intro {
         height: 100vh;
-        width: 25% !important;
+        width: 22% !important;
         background: #000000;
         background: -webkit-linear-gradient(to bottom, #53346D, #750000);
         background: linear-gradient(to bottom, #53346D, #750000);
@@ -325,7 +325,7 @@
     @media (max-width: 6000px) and (min-width: 2048px) {
         .contentbody {
             min-width: 1396px;
-            max-width: calc(100% - 25%);
+            max-width: calc(100% - 22%);
             height: calc(100vh - 15vh)!important;
             -webkit-box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, .2);
             -moz-box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, .2);
@@ -391,8 +391,12 @@
     /** CIERRA ESTILOS MENU ***/
     /*** GRID CONTENIDO ***/
 
+    .contentngrid{
+    	transition: all ease .2s
+    }
+
     .grid-layout {
-        width: calc(100% - 25%) !important;
+        width: calc(100% - 22%) !important;
         padding: 0 0 !important;
         height: 100vh;
         overflow-y: auto;
@@ -405,6 +409,7 @@
     .grid {
         padding-top: 5px;
         margin-bottom: 20px !important;
+        position: relative !important
     }
 
     .grid-sizer,
@@ -482,13 +487,33 @@
     }*/
 
     .grid-item--gigante {
-        margin-bottom: 8px !important
+        margin-bottom: 0px !important;
+        top: 0 !important;
+        left: 0 !important;
+        height: 100% !important;
+        width: 100% !important
     }
 
     .grid-item--gigante,
     .grid-item--gigante .card-panel {
         width: 100% !important;
-        height: 620px !important
+        min-height: 620px !important;
+        height: 100%;
+    }
+
+    .grid-item--gigante .card-panel {
+    	position: absolute !important
+    }
+
+    .minimize-item,
+    .minimize-item *{
+    	width: 0px !important;
+    	max-width: 0px !important;
+    	height: 0px !important;
+    	margin: 0 0 !important;
+    	min-height: 0px !important;
+    	max-height: 0px !important;
+    	overflow: hidden !important;   	
     }
 
     @media (max-width: 768px) {
@@ -543,7 +568,7 @@
                 </div>
                 <div class="col s12 m6 grid-layout hide valign-wrapper">
                     <div class="valign">
-                        <div class="col s12 m12 l10 offset-l1">
+                        <div class="contentngrid col s12 m12 l10 offset-l1">
                             <div class="grid">
                                 <div class="grid-sizer"></div>
                                 <div class="grid-item animated zoomIn">
@@ -666,7 +691,12 @@
 
             $grid.on('click', '.grid-item', function() {
                 // change size of item via class
-                $(this).toggleClass('grid-item--gigante');
+                //$(this).toggleClass('grid-item--gigante');
+                //$('.grid-item').toggleClass('minimize-item');
+
+                $('.grid-item').not(this).removeClass('grid-item--gigante').toggleClass('minimize-item');
+   				$(this).removeClass('minimize-item').toggleClass('grid-item--gigante');
+   				$('.contentngrid').toggleClass('l10 l12 offset-l1')
                 // trigger layout
                 $grid.masonry();
             });

@@ -391,8 +391,8 @@
     /** CIERRA ESTILOS MENU ***/
     /*** GRID CONTENIDO ***/
 
-    .contentngrid{
-    	transition: all ease .2s
+    .contentngrid {
+        transition: all ease .2s
     }
 
     .grid-layout {
@@ -402,8 +402,8 @@
         overflow-y: auto;
     }
 
-    .grid-layout .valign{
-    	width: 100%;
+    .grid-layout .valign {
+        width: 100%;
     }
 
     .grid {
@@ -421,16 +421,40 @@
         /*background-color: red*/
     }
 
-    .grid-item:nth-child(3){    
-    	height: 508px !important
+    .grid-sizer nav,
+    .grid-item nav {
+        background-color: transparent;
+        color: #333;
+        box-shadow: none
     }
 
-    .grid-item:last-child{    
-    	width: 50% !important
+    .grid-item div.nav-content {
+        display: none
     }
 
-    .grid-item:nth-child(3) .card-panel{
-    	height: 508px
+    .grid-item .more-info {
+        display: none
+    }
+
+    .grid-item--gigante .more-info {
+        display: block;
+        animation-delay: .2s;
+    }
+
+    .grid-item--gigante div.nav-content {
+        display: block
+    }
+
+    .grid-item:nth-child(3) {
+        height: 508px !important
+    }
+
+    .grid-item:last-child {
+        width: 50% !important
+    }
+
+    .grid-item:nth-child(3) .card-panel {
+        height: 508px
     }
 
     .grid-item .card-panel {
@@ -454,7 +478,7 @@
         -webkit-border-radius: 80px;
         -moz-border-radius: 80px;
         border-radius: 80px;
-        display: inline-block        
+        display: inline-block
     }
 
     .grid-item .card-panel .profile-static i {
@@ -462,15 +486,15 @@
         line-height: 60px
     }
 
-    .grid-item:nth-child(3) .valign{
-    	height: 100%;
+    .grid-item:nth-child(3) .valign {
+        height: 100%;
     }
 
     .grid-item:nth-child(3) .card-panel .profile-static {
-    	width: 40px;
-    	height: 40px;
-    	float: left;
-    	margin: 8px;
+        width: 40px;
+        height: 40px;
+        float: left;
+        margin: 8px;
     }
 
     .grid-item:nth-child(3) .card-panel .profile-static i {
@@ -478,8 +502,8 @@
         line-height: 40px
     }
 
-    .grid-item:nth-child(3) .card-panel h6 pre{
-    	text-align: left !important
+    .grid-item:nth-child(3) .card-panel h6 pre {
+        text-align: left !important
     }
     /*.grid-sizer:hover,
     .grid-item:hover {
@@ -490,30 +514,48 @@
         margin-bottom: 0px !important;
         top: 0 !important;
         left: 0 !important;
-        height: 100% !important;
-        width: 100% !important
+        width: 100% !important;
+        max-height: calc(100vh - 30px);
+        height: calc(100vh - 30px)
     }
 
     .grid-item--gigante,
     .grid-item--gigante .card-panel {
         width: 100% !important;
         min-height: 620px !important;
-        height: 100%;
+        max-height: calc(100vh - 30px);
+        height: calc(100vh - 30px);
+        background-color: #161616 !important;
+        color: #ccc;
     }
 
     .grid-item--gigante .card-panel {
-    	position: absolute !important
+        position: absolute !important
+    }
+
+    .grid-item--gigante nav h6 {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .grid-item--gigante ul,
+    .grid-item--gigante ul li{
+    	background-color: transparent !important
+    }
+
+    .grid-item--gigante ul li a{
+    	position: relative !important
     }
 
     .minimize-item,
-    .minimize-item *{
-    	width: 0px !important;
-    	max-width: 0px !important;
-    	height: 0px !important;
-    	margin: 0 0 !important;
-    	min-height: 0px !important;
-    	max-height: 0px !important;
-    	overflow: hidden !important;   	
+    .minimize-item * {
+        width: 0px !important;
+        max-width: 0px !important;
+        height: 0px !important;
+        margin: 0 0 !important;
+        min-height: 0px !important;
+        max-height: 0px !important;
+        overflow: hidden !important;
     }
 
     @media (max-width: 768px) {
@@ -574,11 +616,80 @@
                                 <div class="grid-item animated zoomIn">
                                     <div class="col s12">
                                         <div class="card-panel valign-wrapper">
-                                            <div class="valign center-align">
-                                                <div class="profile-static z-depth-2">
+                                            <nav class="nav-extended valign center-align">
+                                                <div class="nav-wrapper profile-static z-depth-2">
                                                     <i class="material-icons">face</i>
                                                 </div>
                                                 <h6> <pre> Armando Rubio </pre> </h6>
+                                                <div class="nav-content">
+                                                    <ul class="tabs tabs-transparent">
+                                                        <li class="tab"><a class="active" href="#aptitudes">Aptitudes</a></li>
+                                                        <li class="tab"><a href="#actitudes">Actitudes</a></li>
+                                                    </ul>
+                                                </div>
+                                            </nav>
+                                            <div class="more-info col s12 animated fadeInLeft">
+                                                <div class="row col s12" id="aptitudes">
+                                                    <div class="col s12 m6">
+                                                        <h3>Hola Mundo!</h3>
+                                                        <p>Soy armando rubio, diseñador y desarrollador web, soy tecnólogo en producción multimedia y estudiante en ingeniería de software, tengo más de 4 años de experiencia en diseño y desarrollo de páginas web y todo tipo de sistemas multiplaforma y crossbrowser, mi experiencia abarca gran dominio de programas y lenguajes de programación que me permiten crear una mezcla perfecta entre diseño y su estructura de desarrollo conociendo estas dos grandes técnicas establezco parámetros de interfaz y experiencia para los usuarios.</p>
+                                                        <div class="card blue-grey darken-4">
+                                                            <div class="card-content">
+                                                                <span class="card-title">
+	                                            				FRONTEND
+	                                            			</span>
+                                                                <p>
+                                                                    En tecnologías frontend poseo la capacidad de diseñar, maquetar y consumir servicios para presentar en pantalla aplicando técnicas de interfaz de usuario y experiencia de usuario.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m6">
+                                                        <ul class="collection">
+                                                            <li class="collection-item avatar">
+                                                                <img src="img/photoshop.jpg" alt="" class="circle">
+                                                                <span class="title">HTML5</span>
+                                                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                                            </li>
+                                                            <li class="collection-item avatar">
+                                                                <img src="img/photoshop.jpg" alt="" class="circle">
+                                                                <span class="title">CSS3</span>
+                                                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                                            </li>
+                                                            <li class="collection-item avatar">
+                                                                <img src="img/photoshop.jpg" alt="" class="circle">
+                                                                <span class="title">JAVASCRIPT</span>
+                                                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                                            </li>
+                                                            <li class="collection-item avatar">
+                                                                <img src="img/photoshop.jpg" alt="" class="circle">
+                                                                <span class="title">ANGULARJS</span>
+                                                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                                            </li>
+                                                            <li class="collection-item avatar">
+                                                                <img src="img/photoshop.jpg" alt="" class="circle">
+                                                                <span class="title">VUEJS</span>
+                                                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -607,7 +718,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                
                                 <div class="grid-item animated zoomIn">
                                     <div class="col s12">
                                         <div class="card-panel valign-wrapper">
@@ -694,9 +804,9 @@
                 //$(this).toggleClass('grid-item--gigante');
                 //$('.grid-item').toggleClass('minimize-item');
 
-                $('.grid-item').not(this).removeClass('grid-item--gigante').toggleClass('minimize-item');
-   				$(this).removeClass('minimize-item').toggleClass('grid-item--gigante');
-   				$('.contentngrid').toggleClass('l10 l12 offset-l1')
+                $('.grid-item').not(this).removeClass('grid-item--gigante').addClass('minimize-item');
+                $(this).removeClass('minimize-item').addClass('grid-item--gigante').find('.card-panel').removeClass('valign-wrapper');
+                $('.contentngrid').removeClass('l10 offset-l1').addClass('l12');
                 // trigger layout
                 $grid.masonry();
             });

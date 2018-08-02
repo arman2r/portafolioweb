@@ -10,18 +10,18 @@
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
     <style type="text/css" media="screen">
         /** intro ***/
-        
+
         @import url('https://fonts.googleapis.com/css?family=Chau+Philomene+One');
         .intro {
             height: 100vh;
             font-family: 'Chau Philomene One', sans-serif;
             transition: all ease .2s
         }
-        
+
         .intro .valign {
             width: 100% !important;
         }
-        
+
         .profile {
             width: 200px;
             height: 200px;
@@ -39,7 +39,7 @@
             box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 1);
             animation: noBack 1s forwards, introProfile 2s ease-in-out forwards 1s
         }
-        
+
         @keyframes noBack {
             0% {
                 background-size: 10000px;
@@ -69,7 +69,7 @@
                 background-position: 0px -290px;
             }
         }
-        
+
         @keyframes introProfile {
             0% {
                 background-position: 0px -290px;
@@ -128,7 +128,7 @@
                 background-size: 1072px
             }
         }
-        
+
         .profile:after {
             position: absolute;
             left: 0;
@@ -140,7 +140,7 @@
             animation: shadowProfile .3s ease forwards;
             animation-delay: 4.1s;
         }
-        
+
         @keyframes shadowProfile {
             from {
                 -webkit-box-shadow: inset 0px 0px 0px 0px rgba(83, 52, 109, 0);
@@ -153,23 +153,23 @@
                 box-shadow: inset 10px 15px 85px 6px rgba(83, 52, 109, 0.3);
             }
         }
-        
+
         .intro-txt {
             font-size: 3em;
             overflow: hidden;
             height: 1.5em;
             opacity: 0;
         }
-        
+
         .contentbody {
             overflow: hidden;
             margin-bottom: 0px !important
         }
-        
+
         .contentbody .valign-wrapper:first-child .intro-txt {
             animation: fadeInLeftintro .2s forwards 1s;
         }
-        
+
         @keyframes fadeInLeftintro {
             from {
                 opacity: 0;
@@ -182,11 +182,11 @@
                 transform: translateX(1em)
             }
         }
-        
+
         .contentbody .valign-wrapper:last-child .intro-txt {
             animation: fadeInRightintro .2s forwards 1s;
         }
-        
+
         @keyframes fadeInRightintro {
             from {
                 opacity: 0;
@@ -199,12 +199,12 @@
                 transform: translateX(1em)
             }
         }
-        
+
         .intro-txt span {
             display: block;
             animation: txtcarru 2s ease forwards 1.1s;
         }
-        
+
         @keyframes txtcarru {
             0% {
                 margin-top: 0;
@@ -260,9 +260,11 @@
                 margin-top: .2em;
             }
         }
+
         /*** cierra intro **/
+
         /*** transformacion intro ***/
-        
+
         .header-intro {
             height: 100vh;
             width: 22% !important;
@@ -270,7 +272,7 @@
             background: -webkit-linear-gradient(to bottom, #53346D, #750000);
             background: linear-gradient(to bottom, #53346D, #750000);
         }
-        
+
         .header-intro .profile {
             position: relative;
             width: 150px;
@@ -287,24 +289,26 @@
             box-shadow: 0px 0px 0px 7px rgba(0, 0, 0, 1);
             background-position-x: 1795px;
         }
-        
+
         .header-intro .intro-txt span {
             animation: none !important;
         }
-        
+
         .header-intro .intro-txt {
             font-size: 2em !important;
             animation: none !important;
             opacity: 1 !important;
             margin: 20px 0;
         }
-        
+
         .contentbody .header-intro:last-child {
             display: none
         }
+
         /** cierra transformacion intro **/
+
         /** MARCO DE LA PAGINA ***/
-        
+
         .contentfull {
             width: 100%;
             height: 100vh;
@@ -316,16 +320,16 @@
             /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             margin-bottom: 0px !important
         }
-        
+
         .contentfull .valign {
             width: 100%
         }
-        
+
         @media (max-width: 6000px) and (min-width: 2048px) {
             .contentbody {
                 min-width: 1396px;
                 max-width: calc(100% - 22%);
-                height: calc(100vh - 15vh)!important;
+                height: calc(100vh - 15vh) !important;
                 -webkit-box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, .2);
                 -moz-box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, .2);
                 box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, .2);
@@ -334,19 +338,21 @@
                 border-radius: 4px;
             }
             .intro {
-                height: calc(100vh - 15vh)!important
+                height: calc(100vh - 15vh) !important
             }
             .header-intro {
-                height: calc(100vh - 15vh)!important
+                height: calc(100vh - 15vh) !important
             }
         }
+
         /** CIERRA MARCO **/
+
         /** ESTILOS MENU ***/
-        
+
         .contentnavlist ul {
             border: none !important
         }
-        
+
         .contentnavlist li {
             border-color: rgba(255, 255, 255, .2) !important;
             font-size: 1.4em !important;
@@ -355,7 +361,7 @@
             position: relative;
             padding: 0 0 !important
         }
-        
+
         .contentnavlist li a {
             font-weight: lighter !important;
             position: relative;
@@ -365,11 +371,11 @@
             padding: 10px 20px !important;
             transition: all ease-in-out .2s
         }
-        
+
         .contentnavlist li a:hover {
             color: #000 !important;
         }
-        
+
         .contentnavlist li a:after {
             content: '';
             position: absolute;
@@ -381,51 +387,46 @@
             z-index: -1;
             animation: fadeOutRight .6s cubic-bezier(0, 0, .58, 1) forwards
         }
-        
+
         .contentnavlist li a:hover:after {
             animation: fadeInLeft .3s cubic-bezier(.42, 0, 1, 1) forwards !important
         }
+
         /** CIERRA ESTILOS MENU ***/
+
         /*** GRID CONTENIDO ***/
-        
+
         .contentngrid {
             transition: all ease .2s
         }
-        
+
         .grid-layout {
             width: calc(100% - 22%) !important;
             padding: 0 0 !important;
             height: 100vh;
             overflow-y: auto;
         }
-        
+
         .grid-layout .valign {
             width: 100%;
         }
-        
+
         .grid {
             padding-top: 5px;
             margin-bottom: 20px !important;
             position: relative !important
         }
-        
+
         .grid-sizer,
         .grid-item {
             width: 25% !important;
             padding: 1px 1px !important;
             box-sizing: border-box !important;
             min-height: 250px !important;
+            cursor:pointer
             /*background-color: red*/
         }
-        
-        .grid-sizer:hover,
-        .grid-item:hover .more-info {
-            position: absolute !important;
-            display: block !important;
-            opacity: .6;
-            font-size: .8em !important
-        }
-        
+
         .grid-sizer nav,
         .grid-item nav,
         .grid-item--gigante nav {
@@ -433,52 +434,52 @@
             color: #333;
             box-shadow: none
         }
-        
+
         .grid-item div.nav-content {
             display: none
         }
-        
+
         .grid-item .more-info {
             display: none
         }
-        
+
         .grid-item--gigante .more-info {
             display: block;
             animation-delay: .2s;
         }
-        
+
         .grid-item--gigante div.nav-content {
             display: block
         }
-        
+
         .grid-item:nth-child(3) {
             height: 508px !important
         }
-        
+
         .grid-item:last-child {
             width: 50% !important
         }
-        
+
         .grid-item:nth-child(3) .card-panel {
             height: 508px
         }
-        
+
         .grid-item .card-panel {
             height: 100%;
             min-height: 250px;
             padding: 2px 2px !important;
             margin: 2px 0 !important;
         }
-        
+
         .grid-item .col {
             padding: 0 .20rem !important
         }
-        
+
         .grid-item .card-panel .valign,
         .grid-item--gigante .card-panel .valign {
             width: 100%
         }
-        
+
         .grid-item .card-panel .profile-static,
         .grid-item--gigante .card-panel .profile-static {
             width: 60px;
@@ -488,36 +489,37 @@
             border-radius: 80px;
             display: inline-block
         }
-        
+
         .grid-item .card-panel .profile-static i {
             font-size: 2.5em;
             line-height: 60px
         }
-        
+
         .grid-item:nth-child(3) .valign {
             height: 100%;
         }
-        
+
         .grid-item:nth-child(3) .card-panel .profile-static {
             width: 40px;
             height: 40px;
             float: left;
             margin: 8px;
         }
-        
+
         .grid-item:nth-child(3) .card-panel .profile-static i {
             font-size: 1.8em;
             line-height: 40px
         }
-        
+
         .grid-item:nth-child(3) .card-panel h6 pre {
             text-align: left !important
         }
+
         /*.grid-sizer:hover,
     .grid-item:hover {
         background-color: purple !important
     }*/
-        
+
         .grid-item--gigante {
             margin-bottom: 0px !important;
             top: 0 !important;
@@ -526,12 +528,12 @@
             max-height: calc(100vh - 30px);
             height: calc(100vh - 30px)
         }
-        
+
         .grid {
             overflow: hidden !important;
             margin-bottom: 0px !important
         }
-        
+
         .grid-item--gigante,
         .grid-item--gigante .card-panel {
             width: 100% !important;
@@ -543,70 +545,70 @@
             padding: 0 0 !important;
             margin: 0 0 !important;
         }
-        
+
         .grid-item--gigante .card-panel {
             position: absolute !important
         }
-        
+
         .grid-item--gigante nav h6 {
             display: inline-block;
             vertical-align: top;
         }
-        
+
         .grid-item--gigante ul,
         .grid-item--gigante ul li {
             background-color: transparent !important
         }
-        
+
         .grid-item--gigante ul li a {
             position: relative !important
         }
-        
+
         .grid-item--gigante .collection-item a.secondary-content:nth-child(5) {
             animation-delay: .2s;
         }
-        
+
         .grid-item--gigante .collection-item a.secondary-content:nth-child(4) {
             animation-delay: .4s;
         }
-        
+
         .grid-item--gigante .collection-item a.secondary-content:nth-child(3) {
             animation-delay: .6s;
         }
-        
+
         .grid-item--gigante .collection-item a.secondary-content:nth-child(2) {
             animation-delay: .8s;
         }
-        
+
         .grid-item--gigante .collection-item a.secondary-content:nth-child(1) {
             animation-delay: 1s;
         }
-        
+
         .grid-item--gigante .collection-item:nth-child(1) .circle,
         .grid-item--gigante .collection-item:nth-child(1) span.title {
             animation-delay: .2s;
         }
-        
+
         .grid-item--gigante .collection-item:nth-child(2) .circle,
         .grid-item--gigante .collection-item:nth-child(2) span.title {
             animation-delay: .4s;
         }
-        
+
         .grid-item--gigante .collection-item:nth-child(3) .circle,
         .grid-item--gigante .collection-item:nth-child(3) span.title {
             animation-delay: .6s;
         }
-        
+
         .grid-item--gigante .collection-item:nth-child(4) .circle,
         .grid-item--gigante .collection-item:nth-child(4) span.title {
             animation-delay: .8s;
         }
-        
+
         .grid-item--gigante .collection-item:nth-child(5) .circle,
         .grid-item--gigante .collection-item:nth-child(5) span.title {
             animation-delay: 1s;
         }
-        
+
         .minimize-item,
         .minimize-item * {
             width: 0px !important;
@@ -617,12 +619,12 @@
             max-height: 0px !important;
             overflow: hidden !important;
         }
-        
+
         .closepanel,
         .closepanel * {
             transition: all ease .2s;
         }
-        
+
         .closepanel {
             width: 50px;
             height: 50px;
@@ -632,15 +634,15 @@
             position: absolute;
             visibility: hidden
         }
-        
+
         .closepanel:hover {
             transform: scale(0.8)
         }
-        
+
         .grid-item--gigante .closepanel {
             visibility: visible;
         }
-        
+
         .closepanel:after,
         .closepanel:before {
             top: 25px;
@@ -664,23 +666,23 @@
             display: block;
             transform: scale(0) !important
         }
-        
+
         .closepanel:after {
             transform: rotate(45deg) scale(0) !important
         }
-        
+
         .closepanel:before {
             transform: rotate(-45deg) scale(0) !important
         }
-        
+
         .grid-item--gigante .closepanel:after {
             transform: rotate(45deg) scale(1) !important
         }
-        
+
         .grid-item--gigante .closepanel:before {
             transform: rotate(-45deg) scale(1) !important
         }
-        
+
         @media (max-width: 768px) {
             .grid-sizer,
             .grid-item {
@@ -689,7 +691,7 @@
                 box-sizing: border-box !important;
             }
         }
-        
+
         @media (max-width: 600px) {
             .grid-sizer,
             .grid-item {
@@ -698,15 +700,17 @@
                 box-sizing: border-box !important;
             }
         }
+
         /** CIERRA GRID ***/
+
         /** BTN SOCIAL FEED **/
-        
+
         .socialfeed a img {
             width: 24px;
             max-width: 24px;
             margin: 8px 0 0 0
         }
-        
+
         .socialfeed a.btn-large {
             background: #ad5389;
             /* fallback for old browsers */
@@ -714,28 +718,89 @@
             /* Chrome 10-25, Safari 5.1-6 */
             background: linear-gradient(to top, #ad5389, #3c1053);
         }
+
         /** CIERRA BTN SOCIAL FEED **/
+
         /** CHART **/
-        
+
         #radarChart {
             position: relative !important;
             display: inline-block !important;
             width: 100% !important;
             color: #fff !important
         }
-        
+
         #radarChart svg text.legend {
             color: #fff !important;
             fill: #fff !important
         }
+
         /** CIERRA CHART **/
+
         /** ACTITUDES ***/
-        
+
         .actitudes-list {
             height: calc(630px - 140px);
             overflow-y: auto;
         }
+
         /** CIERRA ACTITUDES **/
+
+        /*** CARRUSEL PLANES WEB **/
+
+        .carousel {
+            overflow: visible !important
+        }
+
+        .carousel-item {
+            width: 400px !important;
+            height: 400px !important;
+        }
+
+        .mini-info,
+        .mini-info .valign-wrapper {
+            position: absolute !important;
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .mini-info .valign {
+            width: 100%;
+            padding: 10px 20px !important
+        }
+
+        .mini-info .valign {
+            position: relative !important;
+            animation: fadeOutUp .2s ease forwards;
+        }
+
+        .carousel-item:hover .mini-info .valign {
+            animation: fadeInUp .2s ease forwards;
+            background-color: rgba(0, 0, 0, .8)
+        }
+
+
+
+        .color-btns {
+            background: #ad5389 !important;
+            background: -webkit-linear-gradient(to top, #ad5389, #3c1053) !important;
+            background: linear-gradient(to top, #ad5389, #3c1053) !important;
+            transition: all ease .2s
+        }
+
+        .carousel-item .btn {
+            margin: 40px 0 -160px 0 !important;
+            transition: all ease .2s;
+        }
+
+        .carousel-item .mini-info:hover .btn {
+            -webkit-box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.53);
+            -moz-box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.53);
+            box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.53);
+            transition-delay: .3s
+        }
+
+        /** CIERRA CARRUSEL PLANES **/
     </style>
 </head>
 
@@ -756,10 +821,18 @@
                             <div class="row contentnavlist hide" style="float: none">
                                 <div class="col s12 m12 l10 offset-l1">
                                     <ul class="collection with-header">
-                                        <li class="collection-item fadeInLeft"><a class="grey-text text-darken-1 animated">Inicio</a></li>
-                                        <li class="collection-item fadeInRight"><a class="grey-text text-darken-1 animated">Proyectos</a></li>
-                                        <li class="collection-item fadeInLeft"><a class="grey-text text-darken-1 animated">Planes Web</a></li>
-                                        <li class="collection-item fadeInRight"><a class="grey-text text-darken-1 animated">Contactarme</a></li>
+                                        <li class="collection-item fadeInLeft">
+                                            <a class="grey-text text-darken-1 animated">Inicio</a>
+                                        </li>
+                                        <li class="collection-item fadeInRight">
+                                            <a class="grey-text text-darken-1 animated">Proyectos</a>
+                                        </li>
+                                        <li class="collection-item fadeInLeft">
+                                            <a class="grey-text text-darken-1 animated">Planes Web</a>
+                                        </li>
+                                        <li class="collection-item fadeInRight">
+                                            <a class="grey-text text-darken-1 animated">Contactarme</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -778,12 +851,17 @@
                                                 <div class="nav-wrapper profile-static z-depth-2">
                                                     <i class="material-icons">face</i>
                                                 </div>
-                                                <h6> <pre> Armando Rubio </pre> </h6>
+                                                <h6>
+                                                    <pre> Armando Rubio </pre> </h6>
                                                 <a href="#" class="closepanel"></a>
                                                 <div class="nav-content">
                                                     <ul class="tabs tabs-transparent">
-                                                        <li class="tab animated fadeInDown" style="transition-delay: .2s"><a class="active" href="#aptitudes">Aptitudes</a></li>
-                                                        <li class="tab animated fadeInDown" style="transition-delay: .6s"><a href="#actitudes">Actitudes</a></li>
+                                                        <li class="tab animated fadeInDown" style="transition-delay: .2s">
+                                                            <a class="active" href="#aptitudes">Aptitudes</a>
+                                                        </li>
+                                                        <li class="tab animated fadeInDown" style="transition-delay: .6s">
+                                                            <a href="#actitudes">Actitudes</a>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                             </nav>
@@ -791,16 +869,23 @@
                                                 <div id="aptitudes" class="row col s12">
                                                     <div class="col s12 m12 l6 animated fadeInLeft">
                                                         <h3>Hola Mundo!</h3>
-                                                        <p>Soy armando rubio, diseñador y desarrollador web, soy tecnólogo en producción multimedia y estudiante en ingeniería de software, tengo más de 4 años de experiencia en diseño y desarrollo de páginas
-                                                            web y todo tipo de sistemas multiplaforma crossbrowser, mi experiencia abarca gran dominio de programas y lenguajes de programación que me permiten crear una mezcla perfecta entre diseño y su
-                                                            estructura de desarrollo conociendo estas dos grandes técnicas establezco parámetros de interfaz y experiencia para los usuarios.</p>
+                                                        <p>Soy armando rubio, diseñador y desarrollador web, soy tecnólogo en
+                                                            producción multimedia y estudiante en ingeniería de software,
+                                                            tengo más de 4 años de experiencia en diseño y desarrollo de
+                                                            páginas web y todo tipo de sistemas multiplaforma crossbrowser,
+                                                            mi experiencia abarca gran dominio de programas y lenguajes de
+                                                            programación que me permiten crear una mezcla perfecta entre
+                                                            diseño y su estructura de desarrollo conociendo estas dos grandes
+                                                            técnicas establezco parámetros de interfaz y experiencia para
+                                                            los usuarios.</p>
                                                         <div class="card blue-grey darken-4">
                                                             <div class="card-content">
                                                                 <span class="card-title">
-	                                            				FRONTEND
-	                                            			</span>
+                                                                    FRONTEND
+                                                                </span>
                                                                 <p>
-                                                                    En tecnologías frontend poseo la capacidad de diseñar, maquetar y consumir servicios para presentar en pantalla aplicando técnicas de interfaz de usuario y experiencia de usuario.
+                                                                    En tecnologías frontend poseo la capacidad de diseñar, maquetar y consumir servicios para presentar en pantalla aplicando
+                                                                    técnicas de interfaz de usuario y experiencia de usuario.
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -810,43 +895,85 @@
                                                             <li class="collection-item avatar">
                                                                 <img src="img/icon-works/html5.png" alt="" class="circle white animated zoomIn" style="margin:8px 0">
                                                                 <span class="title animated fadeInRight" style="margin:18px 0;display: inline-block;">HTML5</span>
-                                                                <a href="#!" class="secondary-content animated zoomIn"><i class="material-icons">grade</i></a>
-                                                                <a href="#!" class="secondary-content animated zoomIn"><i class="material-icons">grade</i></a>
-                                                                <a href="#!" class="secondary-content animated zoomIn"><i class="material-icons">grade</i></a>
-                                                                <a href="#!" class="secondary-content animated zoomIn"><i class="material-icons">grade</i></a>
-                                                                <a href="#!" class="secondary-content animated zoomIn"><i class="material-icons">grade</i></a>
+                                                                <a href="#!" class="secondary-content animated zoomIn">
+                                                                    <i class="material-icons">grade</i>
+                                                                </a>
+                                                                <a href="#!" class="secondary-content animated zoomIn">
+                                                                    <i class="material-icons">grade</i>
+                                                                </a>
+                                                                <a href="#!" class="secondary-content animated zoomIn">
+                                                                    <i class="material-icons">grade</i>
+                                                                </a>
+                                                                <a href="#!" class="secondary-content animated zoomIn">
+                                                                    <i class="material-icons">grade</i>
+                                                                </a>
+                                                                <a href="#!" class="secondary-content animated zoomIn">
+                                                                    <i class="material-icons">grade</i>
+                                                                </a>
                                                             </li>
                                                             <li class="collection-item avatar">
                                                                 <img src="img/icon-works/css3.png" alt="" class="circle white animated zoomIn" style="margin:8px 0">
                                                                 <span class="title animated fadeInRight" style="margin:18px 0;display: inline-block;">CSS3</span>
-                                                                <a href="#!" class="secondary-content animated zoomIn"><i class="material-icons">grade</i></a>
-                                                                <a href="#!" class="secondary-content animated zoomIn"><i class="material-icons">grade</i></a>
-                                                                <a href="#!" class="secondary-content animated zoomIn"><i class="material-icons">grade</i></a>
-                                                                <a href="#!" class="secondary-content animated zoomIn"><i class="material-icons">grade</i></a>
-                                                                <a href="#!" class="secondary-content animated zoomIn"><i class="material-icons">grade</i></a>
+                                                                <a href="#!" class="secondary-content animated zoomIn">
+                                                                    <i class="material-icons">grade</i>
+                                                                </a>
+                                                                <a href="#!" class="secondary-content animated zoomIn">
+                                                                    <i class="material-icons">grade</i>
+                                                                </a>
+                                                                <a href="#!" class="secondary-content animated zoomIn">
+                                                                    <i class="material-icons">grade</i>
+                                                                </a>
+                                                                <a href="#!" class="secondary-content animated zoomIn">
+                                                                    <i class="material-icons">grade</i>
+                                                                </a>
+                                                                <a href="#!" class="secondary-content animated zoomIn">
+                                                                    <i class="material-icons">grade</i>
+                                                                </a>
                                                             </li>
                                                             <li class="collection-item avatar">
                                                                 <img src="img/icon-works/js.png" alt="" class="circle white animated zoomIn" style="margin:8px 0">
                                                                 <span class="title animated fadeInRight" style="margin:18px 0;display: inline-block;">JAVASCRIPT</span>
-                                                                <a href="#!" class="secondary-content animated zoomIn"><i class="material-icons">grade</i></a>
-                                                                <a href="#!" class="secondary-content animated zoomIn"><i class="material-icons">grade</i></a>
-                                                                <a href="#!" class="secondary-content animated zoomIn"><i class="material-icons">grade</i></a>
-                                                                <a href="#!" class="secondary-content animated zoomIn"><i class="material-icons">grade</i></a>
-                                                                <a href="#!" class="secondary-content animated zoomIn"><i class="material-icons">grade</i></a>
+                                                                <a href="#!" class="secondary-content animated zoomIn">
+                                                                    <i class="material-icons">grade</i>
+                                                                </a>
+                                                                <a href="#!" class="secondary-content animated zoomIn">
+                                                                    <i class="material-icons">grade</i>
+                                                                </a>
+                                                                <a href="#!" class="secondary-content animated zoomIn">
+                                                                    <i class="material-icons">grade</i>
+                                                                </a>
+                                                                <a href="#!" class="secondary-content animated zoomIn">
+                                                                    <i class="material-icons">grade</i>
+                                                                </a>
+                                                                <a href="#!" class="secondary-content animated zoomIn">
+                                                                    <i class="material-icons">grade</i>
+                                                                </a>
                                                             </li>
                                                             <li class="collection-item avatar">
                                                                 <img src="img/icon-works/angular.png" alt="" class="circle white animated zoomIn" style="margin:8px 0">
                                                                 <span class="title animated fadeInRight" style="margin:18px 0;display: inline-block;">ANGULARJS</span>
-                                                                <a href="#!" class="secondary-content animated zoomIn"><i class="material-icons">grade</i></a>
-                                                                <a href="#!" class="secondary-content animated zoomIn"><i class="material-icons">grade</i></a>
-                                                                <a href="#!" class="secondary-content animated zoomIn"><i class="material-icons">grade</i></a>
+                                                                <a href="#!" class="secondary-content animated zoomIn">
+                                                                    <i class="material-icons">grade</i>
+                                                                </a>
+                                                                <a href="#!" class="secondary-content animated zoomIn">
+                                                                    <i class="material-icons">grade</i>
+                                                                </a>
+                                                                <a href="#!" class="secondary-content animated zoomIn">
+                                                                    <i class="material-icons">grade</i>
+                                                                </a>
                                                             </li>
                                                             <li class="collection-item avatar">
                                                                 <img src="img/icon-works/vue.png" alt="" class="circle white animated zoomIn" style="margin:8px 0">
                                                                 <span class="title animated fadeInRight" style="margin:18px 0;display: inline-block;">VUEJS</span>
-                                                                <a href="#!" class="secondary-content animated zoomIn"><i class="material-icons">grade</i></a>
-                                                                <a href="#!" class="secondary-content animated zoomIn"><i class="material-icons">grade</i></a>
-                                                                <a href="#!" class="secondary-content animated zoomIn"><i class="material-icons">grade</i></a>
+                                                                <a href="#!" class="secondary-content animated zoomIn">
+                                                                    <i class="material-icons">grade</i>
+                                                                </a>
+                                                                <a href="#!" class="secondary-content animated zoomIn">
+                                                                    <i class="material-icons">grade</i>
+                                                                </a>
+                                                                <a href="#!" class="secondary-content animated zoomIn">
+                                                                    <i class="material-icons">grade</i>
+                                                                </a>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -860,31 +987,37 @@
                                                             <li class="animated fadeInLeft">
                                                                 <h5>Responsabilidad</h5>
                                                                 <p>
-                                                                    Soy una persona con un alto grado de compromiso y cumplimiento de metas tanto en mi vida laboral, profesional como en mi diario vivir.
+                                                                    Soy una persona con un alto grado de compromiso y cumplimiento de metas tanto en mi vida laboral, profesional como en mi
+                                                                    diario vivir.
                                                                 </p>
                                                             </li>
                                                             <li class="animated fadeInLeft">
                                                                 <h5>Autogestión</h5>
                                                                 <p>
-                                                                    Me considero una persona participe de soluciones o de metodos a mejorar dentro de la organización o proyecto, para el mejoramiento del mismo.
+                                                                    Me considero una persona participe de soluciones o de metodos a mejorar dentro de la organización o proyecto, para el mejoramiento
+                                                                    del mismo.
                                                                 </p>
                                                             </li>
                                                             <li class="animated fadeInLeft">
                                                                 <h5>Motivación</h5>
                                                                 <p>
-                                                                    Para mi, la programación esta llena de retos apacionantes que generan una motivación constante en mi trabajo y una curva de aprendizaje cada ves mas interesante.
+                                                                    Para mi, la programación esta llena de retos apacionantes que generan una motivación constante en mi trabajo y una curva
+                                                                    de aprendizaje cada ves mas interesante.
                                                                 </p>
                                                             </li>
                                                             <li class="animated fadeInLeft">
                                                                 <h5>Autonomía</h5>
                                                                 <p>
-                                                                    El autoaprendizaje es una de las fortalezas de nosotros los desarrolladores, crecemos cada dia como profesionales en constante evolución.
+                                                                    El autoaprendizaje es una de las fortalezas de nosotros los desarrolladores, crecemos cada dia como profesionales en constante
+                                                                    evolución.
                                                                 </p>
                                                             </li>
                                                             <li class="animated fadeInLeft">
                                                                 <h5>Operación</h5>
                                                                 <p>
-                                                                    En mi campo laboral mantengo una operatividad de mi trabajo constante, con el fin de rendir, trato al maximo de no durar con mis proyectos evitando que ver afectada a la compañia y evitando ademas convertirlo en algo monotono.
+                                                                    En mi campo laboral mantengo una operatividad de mi trabajo constante, con el fin de rendir, trato al maximo de no durar
+                                                                    con mis proyectos evitando que ver afectada a la compañia
+                                                                    y evitando ademas convertirlo en algo monotono.
                                                                 </p>
                                                             </li>
                                                         </ul>
@@ -901,7 +1034,8 @@
                                                 <div class="profile-static z-depth-2">
                                                     <i class="material-icons">folder_special</i>
                                                 </div>
-                                                <h6> <pre> Proyectos </pre> </h6>
+                                                <h6>
+                                                    <pre> Proyectos </pre> </h6>
                                             </div>
                                         </div>
                                     </div>
@@ -913,7 +1047,8 @@
                                                 <div class="profile-static z-depth-2">
                                                     <i class="material-icons">domain</i>
                                                 </div>
-                                                <h6> <pre> Experiencia </pre> </h6>
+                                                <h6>
+                                                    <pre> Experiencia </pre> </h6>
                                             </div>
                                         </div>
                                     </div>
@@ -925,7 +1060,8 @@
                                                 <div class="profile-static z-depth-2">
                                                     <i class="material-icons">work_outline</i>
                                                 </div>
-                                                <h6> <pre> Contratarme </pre> </h6>
+                                                <h6>
+                                                    <pre> Contratarme </pre> </h6>
                                             </div>
                                         </div>
                                     </div>
@@ -933,12 +1069,86 @@
                                 <div class="grid-item animated zoomIn">
                                     <div class="col s12">
                                         <div class="card-panel valign-wrapper">
-                                            <div class="valign center-align">
-                                                <div class="profile-static z-depth-2">
+
+
+                                            <nav class="nav-extended valign center-align">
+                                                <div class="nav-wrapper profile-static z-depth-2">
                                                     <i class="material-icons">important_devices</i>
                                                 </div>
-                                                <h6> <pre> Planes Web </pre> </h6>
+                                                <h6>
+                                                    <pre> Planes Web </pre>
+                                                </h6>
+                                                <a href="#" class="closepanel"></a>
+
+                                            </nav>
+
+                                            <div class="row more-info">
+                                                <div class="col-xs-12">
+                                                    <div class="carousel">
+                                                        <a class="carousel-item" href="#one!">
+                                                            <div class="mini-info">
+                                                                <div class="valign-wrapper">
+                                                                    <div class="valign white-text animated hoverable">
+                                                                        <h4>Landing Page</h4>
+                                                                        <p>Su negocio explicado en una sola pagina con control
+                                                                            de anclaje en cada sección, exprese todo lo que
+                                                                            sus visitantes quieren saber en un solo sitio.
+                                                                        </p>
+                                                                        <button class="btn color-btns waves-effect">Comprar ahora</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <img src="img/landingpage.jpg">
+                                                        </a>
+                                                        <a class="carousel-item" href="#two!">
+                                                            <div class="mini-info">
+                                                                <div class="valign-wrapper">
+                                                                    <div class="valign white-text animated hoverable">
+                                                                        <h4>Web Corporativa</h4>
+                                                                        <p>Una página web informativa, detalle cada función
+                                                                            de su empresa, menú con despliegue, maximo 5
+                                                                            páginas, maximo 3 formularios.
+                                                                        </p>
+                                                                        <button class="btn color-btns waves-effect">Comprar ahora</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <img src="img/webcorporativa.jpg">
+                                                        </a>
+                                                        <a class="carousel-item" href="#four!">
+                                                            <div class="mini-info">
+                                                                <div class="valign-wrapper">
+                                                                    <div class="valign white-text animated hoverable">
+                                                                        <h4>Web Ecommerce</h4>
+                                                                        <p>
+                                                                            Que su página web globalice su mercado, dando conocer sus productos, en toda la internet, compras online 100% seguras.
+                                                                        </p>
+                                                                        <button class="btn color-btns waves-effect">Comprar ahora</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <img src="img/webecommerce.jpg">
+                                                        </a>
+                                                        <a class="carousel-item" href="#three!">
+                                                            <div class="mini-info">
+                                                                <div class="valign-wrapper">
+                                                                    <div class="valign white-text animated hoverable">
+                                                                        <h4>Web Administrada</h4>
+                                                                        <p>
+                                                                            Administre su sitio web, genere contenido y mantenga siempre actualizado su portal con un sitio web informativo, ideal para todo tipo
+                                                                            de página web asi sea informativa, empresarial o noticiosa.
+                                                                        </p>
+                                                                        <button class="btn color-btns waves-effect">Comprar ahora</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <img src="img/webadministrada.jpg">
+                                                        </a>
+                                                    </div>
+
+                                                </div>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -949,7 +1159,9 @@
                                                 <div class="profile-static z-depth-2">
                                                     <i class="material-icons">mail</i>
                                                 </div>
-                                                <h6> <pre> Contáctarme </pre> </h6>
+                                                <h6>
+                                                    <pre> Contáctarme </pre>
+                                                </h6>
                                             </div>
                                         </div>
                                     </div>
@@ -975,40 +1187,54 @@
                 <i class="large material-icons">rss_feed</i>
             </a>
             <ul>
-                <li class="hide closepanels"><a class="btn-floating white"><i class="material-icons grey-text text-darken-4 animated">close</i></a></li>
-                <li>
-                    <a class="btn-floating indigo darken-4"><img src="img/redes/facebook.svg" alt="facebook - Armando Rubio"></a>
+                <li class="hide closepanels">
+                    <a class="btn-floating white">
+                        <i class="material-icons grey-text text-darken-4 animated">close</i>
+                    </a>
                 </li>
                 <li>
-                    <a class="btn-floating blue accent-4"><img src="img/redes/linkedin-logo.svg" alt="linkedin - Armando Rubio"></a>
+                    <a class="btn-floating indigo darken-4">
+                        <img src="img/redes/facebook.svg" alt="facebook - Armando Rubio">
+                    </a>
                 </li>
                 <li>
-                    <a class="btn-floating blue darken-4"><img src="img/redes/twitter.svg" alt="twitter - Armando Rubio"></a>
+                    <a class="btn-floating blue accent-4">
+                        <img src="img/redes/linkedin-logo.svg" alt="linkedin - Armando Rubio">
+                    </a>
                 </li>
                 <li>
-                    <a class="btn-floating red darken-1"><img src="img/redes/google-plus.svg" alt="Google plus - Armando Rubio"></a>
+                    <a class="btn-floating blue darken-4">
+                        <img src="img/redes/twitter.svg" alt="twitter - Armando Rubio">
+                    </a>
+                </li>
+                <li>
+                    <a class="btn-floating red darken-1">
+                        <img src="img/redes/google-plus.svg" alt="Google plus - Armando Rubio">
+                    </a>
                 </li>
             </ul>
         </div>
 
     </div>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
     <script src="js/radarChart.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             var elems = document.querySelectorAll('.fixed-action-btn');
             var instances = M.FloatingActionButton.init(elems);
         });
 
-        $(document).ready(function() {
+        $(document).ready(function () {
 
-            setTimeout(function() {
+            setTimeout(function () {
                 $('.intro').addClass('header-intro');
-                $('.contentbody .intro:first-child').find('.intro-txt span:first-child').text('ARMANDOLAWEB');
+                $('.contentbody .intro:first-child').find('.intro-txt span:first-child').text(
+                    'ARMANDOLAWEB');
                 $('.contentnavlist').removeClass('hide').find('li').addClass('animated');
                 $('.grid-layout').removeClass('hide');
 
@@ -1029,24 +1255,30 @@
                 });
 
 
-                $grid.on('click', '.grid-item', function() {
+                $grid.on('click', '.grid-item', function () {
                     // change size of item via class
                     //$(this).toggleClass('grid-item--gigante');
                     //$('.grid-item').toggleClass('minimize-item');
 
-                    $('.grid-item').not(this).removeClass('grid-item--gigante').addClass('minimize-item');
-                    $(this).removeClass('minimize-item grid-item').addClass('grid-item--gigante').find('.card-panel').removeClass('valign-wrapper');
+                    $('.grid-item').not(this).removeClass('grid-item--gigante').addClass(
+                        'minimize-item');
+                    $(this).removeClass('minimize-item grid-item').addClass(
+                        'grid-item--gigante').find('.card-panel').removeClass(
+                            'valign-wrapper');
                     $('.contentngrid').removeClass('l10 offset-l1').addClass('l12');
                     $('.closepanels').removeClass('hide').addClass('rotateIn');
                     $('.socialfeed a').addClass('pulse');
+                    $('.carousel').carousel();
 
                     // trigger layout
                     $grid.masonry();
                 });
 
-                $grid.on('click', '.closepanel', function() {
+                $grid.on('click', '.closepanel', function () {
                     $('.grid-item').not(this).removeClass('grid-item--gigante minimize-item');
-                    $('.grid-item--gigante').addClass('grid-item').removeClass('minimize-item grid-item--gigante').find('.card-panel').addClass('valign-wrapper');
+                    $('.grid-item--gigante').addClass('grid-item').removeClass(
+                        'minimize-item grid-item--gigante').find('.card-panel').addClass(
+                            'valign-wrapper');
                     $('.contentngrid').removeClass('l12').addClass('l10 offset-l1');
                     $('.closepanels').removeClass('rotateIn').addClass('hide');
                     $('.socialfeed a').removeClass('pulse');
@@ -1054,7 +1286,7 @@
                     $grid.masonry();
                 });
 
-                $('.closepanels').on('click', function() {
+                $('.closepanels').on('click', function () {
                     $('.closepanel').click()
                 })
 
@@ -1069,11 +1301,11 @@
             ////////////////////////////////////////////////////////////// 
 
             var margin = {
-                    top: 110,
-                    right: 0,
-                    bottom: 0,
-                    left: 0
-                },
+                top: 110,
+                right: 0,
+                bottom: 0,
+                left: 0
+            },
                 width = Math.min(360, window.innerWidth - 10) - margin.left - margin.right,
                 height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
 

@@ -423,7 +423,8 @@
             padding: 1px 1px !important;
             box-sizing: border-box !important;
             min-height: 250px !important;
-            cursor:pointer
+            cursor: pointer;
+            overflow: hidden !important;
             /*background-color: red*/
         }
 
@@ -477,7 +478,7 @@
 
         .grid-item .card-panel .valign,
         .grid-item--gigante .card-panel .valign {
-            width: 100%
+            width: 100%;
         }
 
         .grid-item .card-panel .profile-static,
@@ -776,10 +777,13 @@
 
         .carousel-item:hover .mini-info .valign {
             animation: fadeInUp .2s ease forwards;
-            background-color: rgba(0, 0, 0, .8)
+            background-color: rgba(0, 0, 0, .8);
+            transition: all ease .2s
         }
 
-
+        .carousel-item .mini-info .valign:hover {
+            background-color: rgba(0, 0, 0, .95) !important
+        }
 
         .color-btns {
             background: #ad5389 !important;
@@ -801,6 +805,58 @@
         }
 
         /** CIERRA CARRUSEL PLANES **/
+
+        /** PROYECTOS **/
+
+        .slider-container {
+            position: relative !important;
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .sliderproyect {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            /*background-color: #000*/
+        }
+
+        .sliderproyect .carruselone {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .sliderproyect .carruselone .carousel-item {
+            height: 100% !important;
+            width: 100% !important
+        }
+
+        .sliderproyect .carruselone .carousel-item .valign {
+            height: initial !important;
+        }
+
+        .sliderproyect .carruselone .carousel-item .valign img {
+            width: 110px
+        }
+
+        .carousel-fixed-item {
+            height: 128px !important;
+            top: 0 !important;
+            bottom: 0 !important;
+            margin: auto !important
+        }
+
+        .carousel-fixed-item a {
+            background-color: transparent !important;
+            width: 120px !important;
+            height: 120px !important;
+            border: 4px solid #fff !important
+        }
+
+        /** CIERRA PROYECTOS ***/
     </style>
 </head>
 
@@ -1029,13 +1085,15 @@
                                 </div>
                                 <div class="grid-item animated zoomIn">
                                     <div class="col s12">
-                                        <div class="card-panel valign-wrapper">
-                                            <div class="valign center-align">
+                                        <div class="card-panel valign-wrapper" style="padding:0 0 !important">
+                                            <div class="center-align slider-container">
                                                 <div class="profile-static z-depth-2">
                                                     <i class="material-icons">folder_special</i>
                                                 </div>
                                                 <h6>
-                                                    <pre> Proyectos </pre> </h6>
+                                                    <pre> Proyectos </pre>
+                                                </h6>
+
                                             </div>
                                         </div>
                                     </div>
@@ -1048,7 +1106,8 @@
                                                     <i class="material-icons">domain</i>
                                                 </div>
                                                 <h6>
-                                                    <pre> Experiencia </pre> </h6>
+                                                    <pre> Experiencia </pre>
+                                                </h6>
                                             </div>
                                         </div>
                                     </div>
@@ -1083,8 +1142,8 @@
                                             </nav>
 
                                             <div class="row more-info">
-                                                <div class="col-xs-12">
-                                                    <div class="carousel">
+                                                <div class="col s12">
+                                                    <div class="carousel carruseltwo">
                                                         <a class="carousel-item" href="#one!">
                                                             <div class="mini-info">
                                                                 <div class="valign-wrapper">
@@ -1135,8 +1194,9 @@
                                                                     <div class="valign white-text animated hoverable">
                                                                         <h4>Web Administrada</h4>
                                                                         <p>
-                                                                            Administre su sitio web, genere contenido y mantenga siempre actualizado su portal con un sitio web informativo, ideal para todo tipo
-                                                                            de página web asi sea informativa, empresarial o noticiosa.
+                                                                            Administre su sitio web, genere contenido y mantenga siempre actualizado su portal con un sitio web informativo, ideal para
+                                                                            todo tipo de página web asi sea informativa,
+                                                                            empresarial o noticiosa.
                                                                         </p>
                                                                         <button class="btn color-btns waves-effect">Comprar ahora</button>
                                                                     </div>
@@ -1216,6 +1276,68 @@
         </div>
 
     </div>
+
+
+    <div class="sliderproyect animated fadeOut">
+        <div class="carruselone carousel carousel-slider center">
+            <div class="carousel-fixed-item center">
+                <a class="btn-floating btn-large waves-effect white grey-text darken-text-2 btn-flat"></a>
+            </div>
+            <div class="carousel-item amber white-text valign-wrapper" href="#two!">
+                <div class="valign">
+                    <div class="col s12 center">
+                        <img src="img/proyectos/hdco.png" alt="hostdime colombia" />
+                    </div>
+                    <div class="col s12 hide">
+                        <h4>HDCO</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae asperiores nobis sit maxime
+                            quae saepe omnis quod voluptates consequatur autem voluptatem animi ea ex ad excepturi, totam
+                            modi. Ut, delectus.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item indigo darken-4 white-text valign-wrapper" href="#one!">
+                <div class="valign">
+                    <div class="col s12 center">
+                        <img src="img/proyectos/ajycabogados.png" alt="jyc abogados colombia" />
+                    </div>
+                    <div class="col s12 hide">
+                        <h4>HDCO</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae asperiores nobis sit maxime
+                            quae saepe omnis quod voluptates consequatur autem voluptatem animi ea ex ad excepturi, totam
+                            modi. Ut, delectus.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item lime white-text valign-wrapper" href="#three!">
+                <div class="valign">
+                    <div class="col s12 center">
+                        <img src="img/proyectos/logo_elpilar.png" alt="el pilar restaurante colombia" />
+                    </div>
+                    <div class="col s12 hide">
+                        <h4>HDCO</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae asperiores nobis sit maxime
+                            quae saepe omnis quod voluptates consequatur autem voluptatem animi ea ex ad excepturi, totam
+                            modi. Ut, delectus.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item blue white-text valign-wrapper" href="#four!">
+                <div class="valign">
+                    <div class="col s12 center">
+                        <img src="img/proyectos/logojeanpiaget.png" alt="jean piaget colombia" />
+                    </div>
+                    <div class="col s12 hide">
+                        <h4>HDCO</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae asperiores nobis sit maxime
+                            quae saepe omnis quod voluptates consequatur autem voluptatem animi ea ex ad excepturi, totam
+                            modi. Ut, delectus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
@@ -1227,6 +1349,11 @@
         document.addEventListener('DOMContentLoaded', function () {
             var elems = document.querySelectorAll('.fixed-action-btn');
             var instances = M.FloatingActionButton.init(elems);
+            var carruone = document.querySelectorAll('.carousel.carousel-slider');
+            var instance = M.Carousel.init(carruone, {
+                fullWidth: true,
+                indicators: true
+            });
         });
 
         $(document).ready(function () {
@@ -1239,6 +1366,8 @@
                 $('.grid-layout').removeClass('hide');
 
                 $('.tabs').tabs();
+
+                $('.sliderproyect').appendTo('.slider-container').removeClass('fadeOut').addClass('fadeIn');
 
 
                 // external JS: masonry.pkgd.js
@@ -1268,7 +1397,7 @@
                     $('.contentngrid').removeClass('l10 offset-l1').addClass('l12');
                     $('.closepanels').removeClass('hide').addClass('rotateIn');
                     $('.socialfeed a').addClass('pulse');
-                    $('.carousel').carousel();
+                    $('.carruseltwo').carousel();
 
                     // trigger layout
                     $grid.masonry();

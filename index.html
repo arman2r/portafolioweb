@@ -9,6 +9,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
     <style type="text/css" media="screen">
+        /** spaces **/
+
+        .smallspacev {
+            padding: 8px 0
+        }
+
+        .mediumspacev {
+            padding: 16px 0
+        }
+
+        .bigspacev {
+            padding: 32px 0
+        }
+
+        .largespacev {
+            padding: 64px 0
+        }
+
+        /** close spaces **/
+
         /** intro ***/
 
         @import url('https://fonts.googleapis.com/css?family=Chau+Philomene+One');
@@ -488,7 +508,9 @@
             -webkit-border-radius: 80px;
             -moz-border-radius: 80px;
             border-radius: 80px;
-            display: inline-block
+            display: inline-block;
+            position: relative;
+            z-index: 10
         }
 
         .grid-item .card-panel .profile-static i {
@@ -501,10 +523,11 @@
         }
 
         .grid-item:nth-child(3) .card-panel .profile-static {
-            width: 40px;
-            height: 40px;
+            width: 40px !important;
+            height: 40px !important;
+            min-height: 40px !important;
             float: left;
-            margin: 8px;
+            margin: -10px 8px 0 8px;
         }
 
         .grid-item:nth-child(3) .card-panel .profile-static i {
@@ -548,7 +571,8 @@
         }
 
         .grid-item--gigante .card-panel {
-            position: absolute !important
+            position: absolute !important;
+            left: 0 !important
         }
 
         .grid-item--gigante nav h6 {
@@ -633,7 +657,8 @@
             right: 30px;
             top: 10px;
             position: absolute;
-            visibility: hidden
+            visibility: hidden;
+            z-index: 10;
         }
 
         .closepanel:hover {
@@ -814,6 +839,11 @@
             height: 100% !important;
         }
 
+        .slider-container h6 {
+            position: relative;
+            z-index: 10
+        }
+
         .sliderproyect {
             position: absolute;
             left: 0;
@@ -849,14 +879,127 @@
             margin: auto !important
         }
 
-        .carousel-fixed-item a {
+        .carousel-fixed-item a.btn-floating.btn-large {
             background-color: transparent !important;
             width: 120px !important;
             height: 120px !important;
-            border: 4px solid #fff !important
+            -webkit-box-shadow: 0px 0px 0px 20px rgba(0, 0, 0, 1);
+            -moz-box-shadow: 0px 0px 0px 20px rgba(0, 0, 0, 1);
+            box-shadow: 0px 0px 0px 20px rgba(0, 0, 0, 1);
+            animation-duration: .2s !important
+        }
+
+        .sliderproyect .carruselone .carousel-item {
+            margin: 0 0px 0 0px !important
+        }
+
+        .middle-indicator {
+            position: absolute;
+            top: 50%;
+        }
+
+        .middle-indicator-text {
+            font-size: 4.2rem;
+        }
+
+        a.middle-indicator-text {
+            color: white !important;
+        }
+
+        .content-indicator {
+            width: 64px;
+            height: 64px;
+            background: none;
+            -moz-border-radius: 50px;
+            -webkit-border-radius: 50px;
+            border-radius: 50px;
+        }
+
+        .grid-item div.left,
+        .grid-item div.right {
+            display: none
+        }
+
+        .grid-item--gigante div.left,
+        .grid-item--gigante div.right {
+            display: block
         }
 
         /** CIERRA PROYECTOS ***/
+
+        /*** EXP LABORAL ***/
+
+        .cvitae {
+            height: 250px;
+            min-height: 250px;
+            border-right: 1px solid rgba(255, 255, 255, .5);
+            border-bottom: 1px solid rgba(255, 255, 255, .5);
+        }
+
+        .cvitae:nth-child(3),
+        .cvitae:nth-child(6) {
+            border-right: none !important
+        }
+
+        .cvitae:nth-child(4),
+        .cvitae:nth-child(5),
+        .cvitae:nth-child(6) {
+            border-bottom: none
+        }
+
+        .cvitae .icons img {
+            animation: zoomIn .2s ease !important
+        }
+
+        .cvitae .icons:nth-child(5) img {
+            animation-delay: .1s !important
+        }
+
+        .cvitae .icons:nth-child(4) img {
+            animation-delay: .2s !important
+        }
+
+        .cvitae .icons:nth-child(3) img {
+            animation-delay: .3s !important
+        }
+
+        .cvitae .icons:nth-child(2) img {
+            animation-delay: .4s !important
+        }
+
+        .cvitae .icons:nth-child(1) img {
+            animation-delay: .5s !important
+        }
+
+        .cvitae:hover img {
+            animation: zoomOut .2s ease !important
+        }
+
+        .cvitae:hover .icons:nth-child(1) img {
+            animation-delay: .1s !important
+        }
+
+        .cvitae:hover .icons:nth-child(2) img {
+            animation-delay: .2s !important
+        }
+
+        .cvitae:hover .icons:nth-child(3) img {
+            animation-delay: .3s !important
+        }
+
+        .cvitae:hover .icons:nth-child(4) img {
+            animation-delay: .4s !important
+        }
+
+        .cvitae:hover .icons:nth-child(5) img {
+            animation-delay: .5s !important
+        }
+
+        .cvitae .icons a {
+            overflow: visible !important
+        }
+
+        /*** CIERRA EXP LABORAL ***/
     </style>
 </head>
 
@@ -1087,12 +1230,16 @@
                                     <div class="col s12">
                                         <div class="card-panel valign-wrapper" style="padding:0 0 !important">
                                             <div class="center-align slider-container">
-                                                <div class="profile-static z-depth-2">
-                                                    <i class="material-icons">folder_special</i>
-                                                </div>
-                                                <h6>
-                                                    <pre> Proyectos </pre>
-                                                </h6>
+                                                <nav class="nav-extended valign center-align">
+                                                    <div class="nav-wrapper profile-static z-depth-2">
+                                                        <i class="material-icons white-text">folder_special</i>
+                                                    </div>
+                                                    <h6>
+                                                        <pre class="white-text"> Proyectos </pre>
+                                                    </h6>
+                                                    <a href="#" class="closepanel"></a>
+
+                                                </nav>
 
                                             </div>
                                         </div>
@@ -1101,14 +1248,166 @@
                                 <div class="grid-item animated zoomIn">
                                     <div class="col s12">
                                         <div class="card-panel valign-wrapper">
-                                            <div class="valign center-align">
-                                                <div class="profile-static z-depth-2">
+                                            <nav class="nav-extended valign center-align">
+                                                <div class="nav-wrapper profile-static z-depth-2">
                                                     <i class="material-icons">domain</i>
                                                 </div>
                                                 <h6>
                                                     <pre> Experiencia </pre>
                                                 </h6>
+                                                <a href="#" class="closepanel"></a>
+                                            </nav>
+                                            <div class="more-info col s12" style="padding:0 0">
+                                                <div class="col s6 m4 cvitae center valign-wrapper">
+                                                    <div class="valign">
+                                                        <h4>Direct Tv</h4>
+                                                        <h5>Instalación</h5>
+                                                        <h6>x4 - Meses</h6>
+                                                        <div class="row">
+                                                            <div class="icons col s2 offset-s5">
+                                                                <a class="btn-floating waves-effect btn-flat">
+                                                                    <img src="img/antenna-tv.svg">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col s6 m4 cvitae center valign-wrapper">
+                                                    <div class="valign">
+                                                        <h4>Cauce Comun</h4>
+                                                        <h5>Preproducción de Video</h5>
+                                                        <h6>x7 - Meses</h6>
+                                                        <div class="row mediumspacev">
+                                                            <div class="icons col s2 offset-s1">
+                                                                <a class="btn-floating waves-effect btn-flat">
+                                                                    <img src="img/adobe/after-effects.svg" class="responsive-img">
+                                                                </a>
+                                                            </div>
+                                                            <div class="icons col s2">
+                                                                <a class="btn-floating waves-effect btn-flat">
+                                                                    <img src="img/adobe/audition.svg" class="responsive-img">
+                                                                </a>
+                                                            </div>
+                                                            <div class="icons col s2">
+                                                                <a class="btn-floating waves-effect btn-flat">
+                                                                    <img src="img/adobe/illustrator.svg" class=" responsive-img">
+                                                                </a>
+                                                            </div>
+                                                            <div class="icons col s2">
+                                                                <a class="btn-floating waves-effect btn-flat">
+                                                                    <img src="img/adobe/photoshop.svg" class=" responsive-img">
+                                                                </a>
+                                                            </div>
+                                                            <div class="icons col s2">
+                                                                <a class="btn-floating waves-effect btn-flat">
+                                                                    <img src="img/adobe/premiere.svg" class="responsive-img">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col s6 m4 cvitae center valign-wrapper">
+                                                    <div class="valign">
+                                                        <h4>Creasotol</h4>
+                                                        <h5>Diseñador de páginas web</h5>
+                                                        <h6>x2 - Años</h6>
+                                                        <div class="row mediumspacev">
+                                                            <div class="icons col s2 offset-s2">
+                                                                <a class="btn-floating waves-effect btn-flat">
+                                                                    <img src="img/html5.svg" class="responsive-img">
+                                                                </a>
+                                                            </div>
+                                                            <div class="icons col s2 offset-s1">
+                                                                <a class="btn-floating waves-effect btn-flat">
+                                                                    <img src="img/css-3.svg" class="responsive-img">
+                                                                </a>
+                                                            </div>
+                                                            <div class="icons col s2 offset-s1">
+                                                                <a class="btn-floating waves-effect btn-flat">
+                                                                    <img src="img/javascript.svg" class="responsive-img">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col s6 m4 cvitae center valign-wrapper">
+                                                    <div class="valign">
+                                                        <h4>HostDime Co</h4>
+                                                        <h5>Desarrollo web</h5>
+                                                        <h6>x2 - Años</h6>
+                                                        <div class="row mediumspacev">
+                                                            <div class="icons col s2 offset-s2">
+                                                                <a class="btn-floating waves-effect btn-flat">
+                                                                    <img src="img/angular.svg" class="responsive-img">
+                                                                </a>
+                                                            </div>
+                                                            <div class="icons col s2">
+                                                                <a class="btn-floating waves-effect btn-flat">
+                                                                    <img src="img/gulp.svg" class="responsive-img" style="height:100% ">
+                                                                </a>
+                                                            </div>
+                                                            <div class="icons col s2">
+                                                                <a class="btn-floating waves-effect btn-flat">
+                                                                    <img src="img/css.svg" class="responsive-img">
+                                                                </a>
+                                                            </div>
+                                                            <div class="icons col s2">
+                                                                <a class="btn-floating waves-effect btn-flat">
+                                                                    <img src="img/git.svg" class="responsive-img">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="col s6 m4 cvitae center valign-wrapper">
+                                                    <div class="valign">
+                                                        <h4>Faroweb</h4>
+                                                        <h5>Desarrollador fullstack Freelance</h5>
+                                                        <h6>x9 - Meses</h6>
+                                                        <div class="row mediumspacev">
+                                                            <div class="icons col s2 offset-s1">
+                                                                <a class="btn-floating waves-effect btn-flat">
+                                                                    <img src="img/php.svg" class="responsive-img">
+                                                                </a>
+                                                            </div>
+                                                            <div class="icons col s2">
+                                                                <a class="btn-floating waves-effect btn-flat">
+                                                                    <img src="img/laravel.svg" class="responsive-img" style="height:100% ">
+                                                                </a>
+                                                            </div>
+                                                            <div class="icons col s2">
+                                                                <a class="btn-floating waves-effect btn-flat">
+                                                                    <img src="img/materializecss.svg" class="responsive-img">
+                                                                </a>
+                                                            </div>
+                                                            <div class="icons col s2">
+                                                                <a class="btn-floating waves-effect btn-flat">
+                                                                    <img src="img/git.svg" class="responsive-img">
+                                                                </a>
+                                                            </div>
+                                                            <div class="icons col s2">
+                                                                <a class="btn-floating waves-effect btn-flat">
+                                                                    <img src="img/wordpress.svg" class="responsive-img">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col s6 m4 cvitae center valign-wrapper">
+                                                    <div class="valign">
+                                                        <h4>Q-vision S.A</h4>
+                                                        <h5>Diseñador Web</h5>
+                                                        <h6>Actualmente</h6>
+                                                    </div>
+                                                </div>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -1279,9 +1578,20 @@
 
 
     <div class="sliderproyect animated fadeOut">
-        <div class="carruselone carousel carousel-slider center">
+        <div class="carruselone carousel carousel-slider center black">
             <div class="carousel-fixed-item center">
-                <a class="btn-floating btn-large waves-effect white grey-text darken-text-2 btn-flat"></a>
+                <a class="btn-floating btn-large waves-effect white grey-text darken-text-2 btn-flat animated"></a>
+                <div class="left">
+                    <a href="Previo" class="movePrevCarousel middle-indicator-text waves-effect waves-light content-indicator">
+                        <i class="material-icons left  middle-indicator-text">chevron_left</i>
+                    </a>
+                </div>
+
+                <div class="right">
+                    <a href="Siguiente" class=" moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator">
+                        <i class="material-icons right middle-indicator-text">chevron_right</i>
+                    </a>
+                </div>
             </div>
             <div class="carousel-item amber white-text valign-wrapper" href="#two!">
                 <div class="valign">
@@ -1341,10 +1651,13 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="js/global-svg.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
     <script src="js/radarChart.js"></script>
+
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var elems = document.querySelectorAll('.fixed-action-btn');
@@ -1352,7 +1665,8 @@
             var carruone = document.querySelectorAll('.carousel.carousel-slider');
             var instance = M.Carousel.init(carruone, {
                 fullWidth: true,
-                indicators: true
+                indicators: true,
+                padding: 0
             });
         });
 
@@ -1368,6 +1682,22 @@
                 $('.tabs').tabs();
 
                 $('.sliderproyect').appendTo('.slider-container').removeClass('fadeOut').addClass('fadeIn');
+                var autoplay = true;
+                setInterval(function () { if (autoplay) $('.carousel.carousel-slider').carousel('next'); }, 4500);
+                $('.carousel.carousel-slider').hover(function () { autoplay = false; }, function () { autoplay = true; });
+                // move next carousel
+                $('.moveNextCarousel').click(function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    $('.carousel').carousel('next');
+                });
+
+                // move prev carousel
+                $('.movePrevCarousel').click(function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    $('.carousel').carousel('prev');
+                });
 
 
                 // external JS: masonry.pkgd.js
@@ -1399,6 +1729,10 @@
                     $('.socialfeed a').addClass('pulse');
                     $('.carruseltwo').carousel();
 
+                    $('.carousel-slider.carousel .carousel-fixed-item a.btn-large').removeClass('zoomIn').addClass('zoomOut').bind('oanimationend animationend webkitAnimationEnd', function () {
+                        $(this).css('visibility', 'hidden')
+                    });
+
                     // trigger layout
                     $grid.masonry();
                 });
@@ -1411,7 +1745,10 @@
                     $('.contentngrid').removeClass('l12').addClass('l10 offset-l1');
                     $('.closepanels').removeClass('rotateIn').addClass('hide');
                     $('.socialfeed a').removeClass('pulse');
-                    // trigger layout
+
+                    $('.carousel-slider.carousel .carousel-fixed-item a.btn-large').removeClass('zoomOut').css('visibility', 'visible').addClass('zoomIn').bind('oanimationend animationend webkitAnimationEnd', function () {
+                        $(this).css('visibility', 'visible')
+                    });
                     $grid.masonry();
                 });
 
